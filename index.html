@@ -54,6 +54,7 @@
     </nav>
     <!-- ========== End Navbar ========== -->
 
+    <!-- Start Hero Section -->
     <div class="">
         <div class="container h-100 w-100 ">
             <div class="row py-4">
@@ -73,7 +74,9 @@
             </div>
         </div>
     </div>
+    <!-- End Hero Section -->
 
+    <!-- Start About Section -->
     <div class="" style="background-color: #FFB84C;">
         <h1 id="about" class="text-center" style="padding-top: 100px;" data-aos="zoom-in">About</h1>
         <section>
@@ -99,7 +102,9 @@
             </div>
     </div>
     </section>
+    <!-- End ABout Section -->
 
+    <!-- Start Services Section -->
     <section id="services" style="padding-top: 50px;">
         <div class="container">
             <h1 class="text-center mt-5" data-aos="zoom-in">Services</h1>
@@ -134,30 +139,65 @@
                 </div>
             </div>
     </section>
+    <!-- End Services Section -->
 
+    <!-- Start Testimonial Section -->
+    <section id="testimoni" style="padding-top: 50px;">
+        <div class="container">
+            <h1 class="text-center mt-5" data-aos="zoom-in">Contact us</h1>
+            <div class="row mt-5">
+                <section class="section-team">
+                    <!-- / End Header Section -->
+                    <div class="row">
+                        <!-- Start Single Person -->
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="single-person">
+                                <div class="person-image m-auto">
+                                    <img src="https://i.ibb.co/G2CBWvb/person1.jpg" alt="">
+                                </div>
+                                <div class="person-info">
+                                    <h3 class="full-name">John Doe</h3>
+                                    <span class="speciality">Web Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / End Single Person -->
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonial Section -->
+
+    <!-- Start Contact Section -->
     <section id="contact" style="padding-top: 50px;">
         <div class="container">
             <h1 class="text-center mt-5" data-aos="zoom-in">Contact us</h1>
             <div class="row mt-5">
-                <form class="col-md-6" style="max-width: 40rem;">
+                <form class="col-md-6" style="max-width: 40rem;" action="https://sheetdb.io/api/v1/b9nzcuzio6o6g"
+                    method="POST" id="sheetdb-form">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
-                        <small class="d-block" style="font-family: 'Helvetica';">example: Syaddad Raihan Putra</small>
-                        <input type="email" class="form-control border border-dark p-2" id="name" required>
+                        <small class="d-block" style="font-family: 'Helvetica';">example: Syaddad Raihan
+                            Putra</small>
+                        <input type="email" class="form-control border border-dark p-2" id="name" name="data[name]"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="telphone" class="form-label">Telephone <span class="text-danger">*</span></label>
                         <small class="d-block" style="font-family: 'Helvetica';">example: +62 812 345 678</small>
-                        <input type="number" class="form-control border border-dark p-2" id="telphone" required>
+                        <input type="number" class="form-control border border-dark p-2" name="data[telephone]"
+                            id="telphone" required>
                     </div>
                     <label for="address">Address <span class="text-danger">*</span></label>
-                    <small class="d-block mt-2" style="font-family: 'Helvetica';">example: Jl. Merpati Raya 5</small>
+                    <small class="d-block mt-2" style="font-family: 'Helvetica';">example: Jl. Merpati Raya
+                        5</small>
                     <div class="form-floating mt-2">
                         <textarea class="form-control border border-dark" placeholder="Leave a comment here"
-                            id="address" style="height: 100px" required></textarea>
+                            id="address" style="height: 100px" required name="data[address]"></textarea>
                     </div>
                     <button type="submit" class="btn btn-warning rounded-5 mt-3 mb-3">Submit</button>
-                    <span class="form-control border border-dark mb-3" style="max-width: 4rem;" aria-disabled="" id="captcha"></span>
+                    <!-- <span class="form-control border border-dark mb-3" style="max-width: 4rem;" aria-disabled=""
+                        id="captcha"></span> -->
                 </form>
                 <div class="col-md-6 d-flex">
                     <iframe
@@ -168,7 +208,9 @@
             </div>
         </div>
     </section>
+    <!-- End Contact Section -->
 
+    <!-- Start Footer -->
     <section class="h-100 w-100" style="box-sizing: border-box; margin-top: 100px;">
         <div class="container text-center text-warning pb-5">
             <p style="margin: 0">Copyright © <span id="copy"></span> Syaddad</p>
@@ -180,6 +222,9 @@
             </div>
         </div>
     </section>
+    <!-- End Footer -->
+
+    <!-- Script JS -->
     <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/aos.js"></script>
@@ -196,6 +241,25 @@
 
         const randomNumberElement = document.getElementById("captcha");
         randomNumberElement.innerHTML = randomNumber;
+    </script>
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                // you can put any JS code here
+                document.getElementById("nama").reset();
+                document.getElementById("telephone").reset();
+                document.getElementById("address").reset();
+                alert('success')
+            });
+        });
     </script>
 </body>
 
