@@ -1,0 +1,484 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DynaPuff', cursive !important;
+
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #ffffff;
+}
+
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+    border-radius: 10px;
+
+}
+
+a.cta {
+    color: #ffffff;
+    background-color: #F16767;
+}
+
+a.cta:hover {
+    color: #ffffff;
+    background-color: #db5b5b;
+    transition: 0.2s;
+}
+
+#back-to-top {
+    display: inline-block;
+    background-color: #F16767;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    z-index: 1000;
+    display: none;
+}
+
+
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: #ef3a3a;
+}
+
+#back-to-top:active {
+    background-color: #ff0000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+}
+
+.content h3 {
+    font-style: italic;
+    color: #96a2a7;
+}
+
+.navbar-1-1.navbar-light .navbar-nav .nav-link {
+    transition: 0.3s;
+    text-align: center;
+}
+
+.navbar-1-1.navbar-light .navbar-nav .nav-link:hover {
+    color: #FFB84C;
+}
+
+.row>.col-sm-6 {
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+@media (max-width: 918px) {
+    .row>.col-sm-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar-1-1.navbar-light .navbar-nav .nav-link {
+        color: #000000;
+        transition: 0.3s;
+    }
+
+    .navbar-1-1.navbar-light .navbar-nav .nav-link:hover {
+        color: #FFB84C;
+    }
+
+    .hero-text {
+        margin-top: 130px !important;
+    }
+
+    .proklamasi {
+        margin-top: 100px !important;
+    }
+
+    .pahlawan-kemerdekaan {
+        margin-top: 200px !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .waves-hero {
+      display: none;
+    }
+  }
+
+.navbar-1-1.navbar-light .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+
+.img-header {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: -1;
+}
+
+.btn-color-theme {
+    color: white !important;
+    background-color: #d53333 !important;
+    font-family: 'Sniglet', cursive !important;
+    transition: 0.3s;
+}
+
+.btn-color-theme:hover {
+    color: white !important;
+    background-color: #ff0000 !important;
+    font-family: 'Sniglet', cursive !important;
+    transition: 0.3s;
+}
+
+.img-soekarno {
+    object-fit: cover;
+    border-radius: 15px
+}
+
+.img-soekarno:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+.hoverfade {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.hoverfade:hover {
+    opacity: 1;
+}
+
+.rotatetrans {
+    transform: rotate(0deg);
+    transition: 0.2s;
+}
+
+.rotatetrans:hover {
+    transform: rotate(-5deg);
+}
+
+.tape {
+    z-index: 1;
+    background-color: rgba(255, 0, 0, 0.2);
+    box-shadow: inset 0 0 1em .5em hsla(0, 0%, 100%, .1);
+    height: 3em;
+    position: absolute;
+    margin-left: -2em;
+    transform: rotate(-30deg);
+    width: 9em;
+    -webkit-filter: drop-shadow(0 1px 1px rgba(255, 0, 0, 0.3));
+}
+
+.tape:after,
+.tape:before {
+    background-size: .4em .4em;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: .2em;
+}
+
+.tape:after {
+    background-image: linear-gradient(45deg, transparent 50%, rgba(255, 0, 0, 0.3) 50%),
+        linear-gradient(-45deg, transparent 50%, rgba(255, 0, 0, 0.3) 50%);
+    background-position: 0 100%;
+    left: -.2em;
+}
+
+.tape:before {
+    background-image: linear-gradient(135deg, transparent 50%, rgba(255, 0, 0, 0.3) 50%),
+        linear-gradient(-135deg, transparent 50%, rgba(255, 0, 0, 0.3) 50%);
+    background-position: 100% 100%;
+    right: -.2em;
+}
+
+.text-caption {
+    font-family: 'Sniglet', cursive;
+    font-size: 18px;
+    line-height: 2.5rem;
+    color: #646464;
+}
+
+.borders {
+    height: 475px;
+    width: 95%;
+    background: transparent;
+    border-radius: 10px;
+    transition: 1s;
+    position: relative;
+}
+
+.borders:hover {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+}
+
+.card-pahlawan {
+    height: 500px;
+    width: 100%;
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card0 {
+    background: url("../images/pahlawan/myamin.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card0:hover {
+    background: url("../images/pahlawan/myamin.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card0:hover h2 {
+    opacity: 1;
+}
+
+.card0:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card1 {
+    background: url("../images/pahlawan/syahrir.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card1:hover {
+    background: url("../images/pahlawan/syahrir.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card1:hover h2 {
+    opacity: 1;
+}
+
+.card1:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card2 {
+    background: url("../images/pahlawan/sudirman.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card2:hover {
+    background: url("../images/pahlawan/sudirman.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card2:hover h2 {
+    opacity: 1;
+}
+
+.card2:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card3 {
+    background: url("../images/pahlawan/soekarno.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card3:hover {
+    background: url("../images/pahlawan/soekarno.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card3:hover h2 {
+    opacity: 1;
+}
+
+.card3:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card4 {
+    background: url("../images/pahlawan/hatta.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card4:hover {
+    background: url("../images/pahlawan/hatta.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card4:hover h2 {
+    opacity: 1;
+}
+
+.card4:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card5 {
+    background: url("../images/pahlawan/kihajar.jpg") center center no-repeat;
+    background-size: 100%;
+}
+
+.card5:hover {
+    background: url("../images/pahlawan/kihajar.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card5:hover h2 {
+    opacity: 1;
+}
+
+.card5:hover .caption-pahlawan {
+    opacity: 1;
+}
+
+.card-pahlawan h2 {
+    color: #fff;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    font-family: 'Sniglet', cursive;
+}
+
+.card-pahlawan p {
+    font-family: 'Sniglet', cursive;
+    opacity: 0;
+}
+
+.bg-theme {
+    background-color: #f80e0e;
+}
+
+.text-pahlawan {
+    position: absolute;
+    margin: 20px;
+    color: #fff;
+    height: 130px;
+    top: 226px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.caption-pahlawan {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.proklamasi {
+    margin-top: 50px;
+}
+
+.pahlawan-kemerdekaan {
+    margin-top: 80px;
+}
+
+
+.embed-responsive-item {
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    width: auto;
+}
+
+.proklamasi-video>h1 {
+    color: white;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.video-proklamasi {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.text-prok {
+    font-family: 'Sniglet', cursive;
+}
+
+.card-body>h1 {
+    color: #000;
+}
+
+.card-body>p {
+    color: #000;
+}
+
+.card-text-caption {
+    font-family: 'Sniglet', cursive;
+}
+
+body .start-quiz__ {
+    padding-top: 145px;
+    padding-bottom: 145px;
+}
+
+body .start-quiz__ p {
+    font-family: 'Sniglet', cursive;
+}
+
+@media screen and (max-width: 768px) {
+    body .start-quiz__ {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.text-theme {
+    color: #D53333;
+}
