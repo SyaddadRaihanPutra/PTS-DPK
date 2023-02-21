@@ -254,10 +254,8 @@
                 response => response.json()
             ).then((html) => {
                 // you can put any JS code here
-                document.getElementById("nama").reset();
-                document.getElementById("telephone").reset();
-                document.getElementById("address").reset();
-                alert('success')
+                alert('success');
+                form.reset();
             });
         });
     </script>
