@@ -175,6 +175,7 @@
             <div class="row mt-5">
                 <form class="col-md-6" style="max-width: 40rem;" action="https://sheetdb.io/api/v1/b9nzcuzio6o6g"
                     method="POST" id="sheetdb-form">
+                    <!-- <div id="alertForm" class="text-success">Data Berhasil di kirim</div> -->
                     <div class="mb-3">
                         <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                         <small class="d-block" style="font-family: 'Helvetica';">example: Syaddad Raihan
@@ -253,8 +254,7 @@
             }).then(
                 response => response.json()
             ).then((html) => {
-                // you can put any JS code here
-                alert('success');
+                alert('Success!');
                 form.reset();
             });
         });
