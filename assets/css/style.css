@@ -180,6 +180,12 @@ a.cta:hover {
     color: #016cec;
 }
 
+.section-team .single-person .person-info .speciality:hover {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #016cec;
+}
+
 .section-team .single-person:hover .full-name,
 .section-team .single-person:hover .speciality {
     color: #fff;
